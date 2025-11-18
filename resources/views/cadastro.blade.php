@@ -5,191 +5,199 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novo Registro</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #2c2c2c;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .form-card {
-            background-color: white;
-            border-radius: 8px;
-            padding: 32px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .page-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 32px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .page-title {
-            color: #00bcd4;
-            font-size: 24px;
-            font-weight: 500;
-        }
-
-        .close-btn {
-            background: none;
-            border: none;
-            font-size: 28px;
-            color: #999;
-            cursor: pointer;
-            padding: 0;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: color 0.2s;
-            line-height: 1;
-        }
-
-        .close-btn:hover {
-            color: #333;
-        }
-
-        .form-group {
-            margin-bottom: 24px;
-        }
-
-        .form-label {
-            display: block;
-            color: #00bcd4;
-            font-size: 14px;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-
-        .required {
-            color: #00bcd4;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid #e0e0e0;
-            border-radius: 4px;
-            font-size: 15px;
-            background-color: #f5f5f5;
-            transition: border-color 0.2s, background-color 0.2s;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: #00bcd4;
-            background-color: white;
-        }
-
-        .form-input::placeholder {
-            color: #999;
-        }
-
-        .form-actions {
-            display: flex;
-            gap: 12px;
-            margin-top: 32px;
-            padding-top: 24px;
-            border-top: 1px solid #e0e0e0;
-        }
-
-        .btn {
-            padding: 12px 24px;
-            border: none;
-            border-radius: 4px;
-            font-size: 15px;
-            cursor: pointer;
-            transition: all 0.2s;
-            flex: 1;
-        }
-
-        .btn-primary {
-            background-color: #00bcd4;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: #00acc1;
-        }
-
-        .btn-secondary {
-            background-color: #e0e0e0;
-            color: #666;
-        }
-
-        .btn-secondary:hover {
-            background-color: #d0d0d0;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/cadastro.css') }}">
 </head>
 
 <body>
-    <div class="container">
-        <div class="form-card">
-            <div class="page-header">
-                <h1 class="page-title">Novo Registro</h1>
-                <button class="close-btn" onclick="window.history.back()">&times;</button>
+    <div class="conteiner">
+        <div class="cartao-formulario">
+
+            <div class="cabecalho-pagina">
+                <h1 class="titulo-pagina">Novo Registro</h1>
+                <button class="botao-fechar" onclick="window.history.back()">&times;</button>
             </div>
 
             <form>
-                <div class="form-group">
-                    <label class="form-label">Cartão do SUS: <span class="required">*</span></label>
-                    <input type="text" id="sus" class="form-input" required>
+
+                <div class="grupo-formulario">
+                    <label class="rotulo">Cartão do SUS: <span class="obrigatorio">*</span></label>
+                    <input type="text" id="sus" class="campo" required>
                 </div>
 
-                <div class="form-group">
-                    <label class="form-label">Nome</label>
-                    <input type="text" class="form-input">
+                <div class="grupo-formulario">
+                    <label class="rotulo">Nome</label>
+                    <input type="text" class="campo">
                 </div>
 
-                <div class="form-group">
-                    <label class="form-label">Peso (KG) <span class="required">*</span></label>
-                    <input type="number" step="0.1" class="form-input" required>
+                <div class="grupo-formulario">
+                    <label class="rotulo">Peso (KG) <span class="obrigatorio">*</span></label>
+                    <input type="text" id="peso" class="campo" required>
                 </div>
 
-                <div class="form-group">
-                    <label class="form-label">Altura (M) <span class="required">*</span></label>
-                    <input type="number" step="0.01" class="form-input" required>
+                <div class="grupo-formulario">
+                    <label class="rotulo">Altura (M) <span class="obrigatorio">*</span></label>
+                    <input type="text" id="altura" class="campo" required>
                 </div>
 
-                <div class="form-group">
-                    <label class="form-label">Data da última menstruação</label>
-                    <input type="date" class="form-input">
+                <div class="grupo-formulario">
+                    <label class="rotulo">Data da última menstruação</label>
+                    <input type="date" class="campo">
                 </div>
 
-                <div class="form-group">
-                    <label class="form-label">Data de nascimento</label>
-                    <input type="date" class="form-input">
+                <div class="grupo-formulario">
+                    <label class="rotulo">Data de nascimento</label>
+                    <input type="date" class="campo">
                 </div>
 
-                <div class="form-group">
-                    <label class="form-label">Data da última gestação</label>
-                    <input type="date" class="form-input">
+                <div class="grupo-formulario">
+                    <label class="rotulo">Primeira gestação?</label>
+                    <input type="checkbox" id="primeiraGestacao">
                 </div>
 
-                <div class="form-actions">
-                    <button type="button" class="btn btn-secondary" onclick="window.history.back()">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">Salvar</button>
+                <div class="grupo-formulario">
+                    <label class="rotulo">Data da última gestação</label>
+                    <input type="date" id="ultimaGestacao" class="campo">
                 </div>
+
+                <div class="acoes-formulario">
+                    <button type="button" class="botao botao-secundario" onclick="window.history.back()">Cancelar</button>
+                    <button type="submit" class="botao botao-primario">Salvar</button>
+                </div>
+
+                <div class="secao-gestacao">
+                    <div class="titulo-secao">
+                        <svg class="icone-edicao" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                        </svg>
+                        <h2>Gestação</h2>
+                    </div>
+
+                    <div class="grupo-toggle">
+                        <label class="rotulo-toggle">Primeira Gestação?</label>
+                        <label class="switch">
+                            <input type="checkbox" id="primeiraGestacao">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="grupo-toggle">
+                        <label class="rotulo-toggle">Gestação Múltipla?</label>
+                        <label class="switch">
+                            <input type="checkbox" id="gestacaoMultipla">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="grupo-toggle">
+                        <label class="rotulo-toggle">Foi por reprodução assistida?</label>
+                        <label class="switch">
+                            <input type="checkbox" id="reproducaoAssistida">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="grupo-toggle">
+                        <label class="rotulo-toggle">Já teve alguma perda gestacional?</label>
+                        <label class="switch">
+                            <input type="checkbox" id="perdaGestacional">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="secao-gestacao">
+                    <div class="titulo-secao">
+                        <svg class="icone-edicao" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                        </svg>
+                        <h2>Mental</h2>
+                    </div>
+
+                    <div class="grupo-toggle">
+                        <label class="rotulo-toggle">Vive num ambiente estressante?</label>
+                        <label class="switch">
+                            <input type="checkbox" id="primeiraGestacao">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="grupo-toggle">
+                        <label class="rotulo-toggle">A gestação foi planejada?</label>
+                        <label class="switch">
+                            <input type="checkbox" id="gestacaoMultipla">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="grupo-toggle">
+                        <label class="rotulo-toggle">A gestante aceita a gravidez?</label>
+                        <label class="switch">
+                            <input type="checkbox" id="reproducaoAssistida">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="grupo-toggle">
+                        <label class="rotulo-toggle">Tem histórico psiquiátrico?</label>
+                        <label class="switch">
+                            <input type="checkbox" id="perdaGestacional">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="secao-gestacao">
+                    <div class="titulo-secao">
+                        <svg class="icone-edicao" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                        </svg>
+                        <h2>Saúde</h2>
+                    </div>
+
+                    <div class="grupo-toggle">
+                        <label class="rotulo-toggle">Histórico de pré-eclampsia?</label>
+                        <label class="switch">
+                            <input type="checkbox" id="primeiraGestacao">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="grupo-toggle">
+                        <label class="rotulo-toggle">Gestação Múltipla?</label>
+                        <label class="switch">
+                            <input type="checkbox" id="gestacaoMultipla">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="grupo-toggle">
+                        <label class="rotulo-toggle">Foi por reprodução assistida?</label>
+                        <label class="switch">
+                            <input type="checkbox" id="reproducaoAssistida">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="grupo-toggle">
+                        <label class="rotulo-toggle">Já teve alguma perda gestacional?</label>
+                        <label class="switch">
+                            <input type="checkbox" id="perdaGestacional">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+
+
             </form>
+
         </div>
     </div>
+
     <script src="{{ asset('js/cadastroScript.js') }}"></script>
 </body>
 
