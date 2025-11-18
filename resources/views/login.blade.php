@@ -12,7 +12,7 @@
     {{-- FONTE --}}
     <style>@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');</style>
 
-    <title>Document</title>
+    <title>Login</title>
 </head>
 <body>
     <section class="container-login">
