@@ -18,10 +18,10 @@ class ViewController extends Controller
         ];
 
         if (Auth::guard('medico')->attempt($credenciais)) {
-            return redirect()->route('cadastro');
+            return redirect()->route('cadastro')->with('success', 'Login realizado com sucesso!');
         }
         
-        return redirect()->route('login');
+        return redirect()->route('login')->with('error', 'Credenciais inválidas. Por favor, tente novamente.');
     }
 
     public function sair(Request $request) {
@@ -30,7 +30,7 @@ class ViewController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect()->route('login')->with('info', 'Logout realizado com sucesso!');
     }
     
     public function cadastro()
