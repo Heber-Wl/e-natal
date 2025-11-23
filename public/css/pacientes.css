@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(180deg, #e8f6f6 0%, #f8fafa 50%, #ffffff 100%);
+    min-height: 100vh;
+}
+
+.conteudo-principal {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.cabecalho-pagina {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 28px;
+}
+
+.info-pagina {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.caminho-navegacao {
+    font-size: 13px;
+    color: #999;
+}
+
+.caminho-navegacao a {
+    color: #00bcd4;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.caminho-navegacao a:hover {
+    color: #0097a7;
+}
+
+.titulo-pagina {
+    font-size: 26px;
+    color: #333;
+    font-weight: 600;
+}
+
+.perfil-profissional {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 188, 212, 0.1);
+}
+
+.foto-profissional {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00bcd4;
+}
+
+.dados-profissional {
+    display: flex;
+    flex-direction: column;
+}
+
+.nome-profissional {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+.registro-profissional {
+    font-size: 12px;
+    color: #888;
+}
+
+.barra-busca {
+    background: white;
+    border-radius: 12px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    border: 2px solid #e8e8e8;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+}
+
+.barra-busca:focus-within {
+    border-color: #00bcd4;
+    box-shadow: 0 2px 12px rgba(0, 188, 212, 0.15);
+}
+
+.barra-busca i {
+    color: #00bcd4;
+    font-size: 18px;
+}
+
+.campo-busca {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    background: transparent;
+}
+
+.campo-busca::placeholder {
+    color: #aaa;
+}
+
+.lista-pacientes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cartao-paciente {
+    background: white;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cartao-paciente:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 188, 212, 0.12);
+    border-color: rgba(0, 188, 212, 0.3);
+}
+
+.foto-paciente {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    border: 2px solid #e8e8e8;
+    transition: border-color 0.3s ease;
+}
+
+.cartao-paciente:hover .foto-paciente {
+    border-color: #00bcd4;
+}
+
+.foto-paciente img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.foto-paciente i {
+    font-size: 24px;
+    color: #ccc;
+}
+
+.info-paciente {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nome-paciente {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+.sus-paciente {
+    font-size: 13px;
+    color: #888;
+}
+
+.data-paciente {
+    font-size: 12px;
+    color: #aaa;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.seta-paciente {
+    color: #ccc;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.cartao-paciente:hover .seta-paciente {
+    color: #00bcd4;
+    transform: translateX(4px);
+}
+
+.botao-adicionar {
+    position: fixed;
+    bottom: 100px;
+    right: 40px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00bcd4, #0097a7);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0, 188, 212, 0.4);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-adicionar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 24px rgba(0, 188, 212, 0.5);
+}
+
+@media (max-width: 600px) {
+
+    .conteudo-principal {
+        margin: 24px auto;
+    }
+
+    .cabecalho-pagina {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .perfil-profissional {
+        width: 100%;
+    }
+
+    .cartao-paciente {
+        padding: 14px 16px;
+    }
+
+    .foto-paciente {
+        width: 48px;
+        height: 48px;
+    }
+
+    .botao-adicionar {
+        bottom: 80px;
+        right: 20px;
+    }
+}

@@ -38,7 +38,6 @@ class ViewController extends Controller
 
         return redirect()->route('login')->with('info', 'Logout realizado com sucesso!');
     }
-    
     public function cadastro()
     {
         return view('cadastro');
@@ -50,5 +49,9 @@ class ViewController extends Controller
         } catch (\Exception $e) {
             return redirect()->route('cadastro')->with('error', 'Erro ao cadastrar paciente: ');
         }
+    }
+    public function listaPacientes()
+    {
+        return view('pacientes'); 
     }
 }
