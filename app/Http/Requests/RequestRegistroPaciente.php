@@ -24,8 +24,8 @@ class RequestRegistroPaciente extends FormRequest
         return [
             'nome' => 'required|string|max:255',
             'cartao_sus' => 'required|string|max:20',
-            'peso' => 'required|numeric',
-            'altura' => 'required|numeric',
+            'peso' => 'required|string',
+            'altura' => 'required|string',
             'data_nascimento' => 'required|date',
             'data_ultima_mestruacao' => 'nullable|date',
         ];

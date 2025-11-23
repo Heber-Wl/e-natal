@@ -38,9 +38,24 @@ class ViewController extends Controller
 
         return redirect()->route('login')->with('info', 'Logout realizado com sucesso!');
     }
-    
     public function cadastro()
     {
         return view('cadastro');
     }
+<<<<<<<<< Temporary merge branch 1
+    public function cadastrar(RequestRegistroPaciente $request) {
+        try {
+            $this->medicoService->cadastrarPaciente($request);
+            return redirect()->route('cadastro')->with('success', 'Paciente cadastrado com sucesso!');
+        } catch (\Exception $e) {
+            return redirect()->route('cadastro')->with('error', 'Erro ao cadastrar paciente: ');
+        }
+    }
+=========
+
+    public function listaPacientes()
+{
+    return view('pacientes'); 
+}
+>>>>>>>>> Temporary merge branch 2
 }

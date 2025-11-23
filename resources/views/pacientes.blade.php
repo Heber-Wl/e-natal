@@ -11,14 +11,6 @@
             </div>
             <h1 class="titulo-pagina">Pacientes</h1>
         </div>
-
-        <div class="perfil-profissional">
-            <img src="{{ asset('images/avatar-profissional.jpg') }}" alt="Foto" class="foto-profissional">
-            <div class="dados-profissional">
-                <span class="nome-profissional">Joyce Gaia</span>
-                <span class="registro-profissional">xxx-xxx-xxx (coren ou crm)</span>
-            </div>
-        </div>
     </div>
 
     <div class="barra-busca">
