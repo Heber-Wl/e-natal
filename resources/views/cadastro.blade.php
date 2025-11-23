@@ -6,7 +6,7 @@
     <div class="cabecalho-pagina">
         <div class="info-pagina">
             <div class="caminho-navegacao">
-                <a href="/">Início</a> / Pacientes
+                <a href="/">Novo Registro</a> / Pacientes
             </div>
             <h1 class="titulo-pagina">Novo Registro</h1>
         </div>

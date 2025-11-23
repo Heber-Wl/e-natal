@@ -1,12 +1,17 @@
 <nav class="barra-navegacao">
     <div class="logo">
         <i class="fas fa-heartbeat"></i>
-        <span>PréNatal</span>
+        <span>E-natal</span>
     </div>
 
     <div class="menu-links">
-        <a href="{{ route('pacientes') }}" class="ativo">Inicio</a>
-        <a href="{{ route('cadastro') }}">Novo Registro</a>
+        <a href="{{ route('pacientes') }}" class="{{ Request::routeIs('pacientes') ? 'ativo' : '' }}">
+            Início
+        </a>
+
+        <a href="{{ route('cadastro') }}" class="{{ Request::routeIs('cadastro') ? 'ativo' : '' }}">
+            Novo Registro
+        </a>
     </div>
 
     <div class="info-usuario">

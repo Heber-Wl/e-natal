@@ -2,7 +2,7 @@
     <div class="rodape-conteudo">
         <div class="rodape-logo">
             <i class="fas fa-heartbeat"></i>
-            <span>PréNatal</span>
+            <span>E-natal</span>
         </div>
 
         <p class="rodape-descricao">
