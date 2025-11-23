@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novo Registro</title>
     <link rel="stylesheet" href="{{ asset('css/cadastro.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    {{-- FONTE --}}
+    <style>@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');</style>
 </head>
 <body>
+    @include('layouts.alert')
     <nav class="barra-navegacao">
         <div class="logo">
             <i class="fas fa-heartbeat"></i>
@@ -18,7 +23,7 @@
             <a href="#" class="ativo">Novo Registro</a>
         </div>
         <div class="info-usuario">
-            <span>Dr. Silva</span>
+            <span>{{ Auth::guard('medico')->user()->resgatarPrimeirosDoisNomes() }}</span>
             <div class="avatar-usuario">DS</div>
         </div>
     </nav>
