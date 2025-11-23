@@ -16,7 +16,7 @@ class MedicoMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         if (!auth()->guard('medico')->check()) {
-            return redirect()->route('login');
+            return redirect()->route('login')->with('warning', 'Você precisa estar logado para acessar essa página.');
         }
         return $next($request);
     }
