@@ -5,8 +5,8 @@
     </div>
 
     <div class="menu-links">
-        <a href="#" class="ativo">Inicio</a>
-        <a href="#">Novo Registro</a>
+        <a href="{{ route('pacientes') }}" class="ativo">Inicio</a>
+        <a href="{{ route('cadastro') }}">Novo Registro</a>
     </div>
 
     <div class="info-usuario">

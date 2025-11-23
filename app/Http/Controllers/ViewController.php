@@ -51,7 +51,6 @@ class ViewController extends Controller
             $this->medicoService->cadastrarPaciente($request);
             return redirect()->route('cadastro')->with('success', 'Paciente cadastrado com sucesso!');
         } catch (\Exception $e) {
-            dd($e);
             return redirect()->route('cadastro')->with('error', 'Erro ao cadastrar paciente: ');
         }
     }
