@@ -1,0 +1,211 @@
+.container-cadastro {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #3fdada, #2EAEAF, #1e6b6b);
+    background-size: 300% 300%;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.bloco-form {
+    display: grid;
+    width: 564px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 6px 6px 0 #2280803a;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 30px;
+}
+
+.icon-baby {
+    height: 35px;
+}
+
+.titulo {
+    color: #2EAEAF;
+    font-size: 35px;
+}
+
+.conteudo {
+    padding: 30px;
+    display: grid;
+    gap: 1rem;
+}
+
+.inputs {
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+}
+
+.label {
+    color: #2EAEAF;
+    font-weight: 500;
+}
+
+.input {
+    height: 45px;
+    border: 0.05px solid #adabab7a;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #7e7e7e;
+    padding-left: 5px;
+    transition: all 0.3s ease;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #2EAEAF;
+    box-shadow: 0 0 0 3px rgba(46, 174, 175, 0.1);
+}
+
+.input-senha-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-senha-wrapper .input {
+    width: 100%;
+    height: 45px;
+    border: 0.05px solid #adabab7a;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #7e7e7e;
+    padding-left: 10px;
+    padding-right: 45px; 
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.input-senha-wrapper .input:focus {
+    outline: none;
+    border-color: #2EAEAF;
+    box-shadow: 0 0 0 3px rgba(46, 174, 175, 0.1);
+}
+
+.toggle-senha {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #2EAEAF;
+    background: none;
+    border: none;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}   
+
+.toggle-senha:hover {
+    opacity: 0.7;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.toggle-senha:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.toggle-senha svg {
+    height: 22px;
+    width: 22px;
+    display: block;
+}
+
+.senha-requisitos {
+    font-size: 12px;
+    color: #7e7e7e;
+    margin-top: 4px;
+}
+
+.link-login {
+    color: #2EAEAF;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.link-login:hover {
+    opacity: 0.8;
+}
+
+.botao-cadastrar {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    justify-content: center;
+    background-color: #2EAEAF;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    border: none;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao-cadastrar:hover {
+    background-color: #1e6b6b;
+    transform: scale(1.05);
+}
+
+.botao-cadastrar:active {
+    transform: scale(0.95);
+}
+
+.icone-botao {
+    height: 30px;
+    width: 37px;
+}
+
+.senha-wrapper {
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .container-cadastro {
+        padding: 20px;
+    }
+
+    .bloco-form {
+        width: 100%;
+        max-width: 564px;
+    }
+
+    .titulo {
+        font-size: 28px;
+    }
+
+    .input {
+        font-size: 16px;
+    }
+
+}
