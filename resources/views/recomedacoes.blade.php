@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<link rel="stylesheet" href="{{ asset('css/recomendacoes.css') }}">
 @section('title', 'Recomendações')
 
 @section('content')
@@ -7,7 +7,7 @@
     <div class="cabecalho-pagina">
         <div class="info-pagina">
             <div class="caminho-navegacao">
-                <a href="#">Início</a> / <a href="#">Pacientes</a> / <a href="#">Detalhes</a> / Recomendações
+                <a href="{{ route('pacientes') }}">Início</a> / <a href="{{ route('pacientes') }}">Pacientes</a> / <a href="{{ url()->previous() }}">Detalhes</a> / Recomendações
             </div>
             <h1 class="titulo-pagina">Recomendações</h1>
         </div>
@@ -91,12 +91,8 @@
         </div>
 
         <div class="area-botoes-recomendacoes">
-            <button type="button" class="botao-acao-rec botao-voltar-rec" onclick="window.history.back()">
-                <i class="fas fa-arrow-left"></i>
-                Voltar
-            </button>
             <button type="button" class="botao-acao-rec botao-voltar-rec"
-                onclick="window.location='{{ route('detalhes') }}'">
+                onclick="window.location='{{ url()->previous() }}'">
                 <i class="fas fa-arrow-left"></i>
                 Voltar
             </button>
