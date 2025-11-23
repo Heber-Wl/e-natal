@@ -36,7 +36,7 @@
                 <span class="titulo">E-NATAL</span>
             </div>
             
-            <form class="conteudo" action="{{ route('cadastrar') }}" method="POST">
+            <form class="conteudo" action="{{ route('registrarMedico') }}" method="POST">
                 @csrf
                 <div class="inputs">
                     <label class="label" for="nome">Nome Completo</label>

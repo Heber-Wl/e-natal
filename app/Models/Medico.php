@@ -30,6 +30,18 @@ class Medico extends Authenticatable
         $primeirosDoisNomesArray = array_slice($nomeArray, 0, 2);
         return implode(' ', $primeirosDoisNomesArray);
     }
+    public function resgatarPrimeirosDuasLetras(): string {
+        $nomeArray = explode(' ', trim($this->nome));
+
+        $primeirosDois = array_slice($nomeArray, 0, 2);
+
+        $iniciais = '';
+        foreach ($primeirosDois as $parte) {
+            $iniciais .= mb_strtoupper(mb_substr($parte, 0, 1));
+        }
+
+        return $iniciais;
+    }
     public function setRememberToken($value)
     {
     }

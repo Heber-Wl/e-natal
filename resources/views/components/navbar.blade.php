@@ -16,6 +16,6 @@
 
     <div class="info-usuario">
         <span>Dr. {{ Auth::guard('medico')->user()->resgatarPrimeirosDoisNomes() }}</span>
-        <div class="avatar-usuario">DS</div>
+        <div class="avatar-usuario">{{ Auth::guard('medico')->user()->resgatarPrimeirosDuasLetras() }}</div>
     </div>
 </nav>

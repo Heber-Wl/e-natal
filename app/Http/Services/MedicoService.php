@@ -2,6 +2,7 @@
 
 namespace App\Http\Services;
 
+use App\Models\Medico;
 use App\Models\Paciente;
 use Illuminate\Support\Facades\Auth;
 
@@ -29,6 +30,18 @@ class MedicoService
             'hipertensao' => $request->boolean('hipertensao'),
             'doenca_tiroide' => $request->boolean('doenca_tiroide'),
             'medico_id' => Auth::guard('medico')->user()->id,
+        ]);
+    }
+
+    public function registrarMedico($request) {
+        $cpf = preg_replace('/\D/', '', $request->cpf);
+
+        Medico::create([
+            'nome' => $request->nome,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'cpf' => $cpf,
+            'crm' => $request->crm_coren,
         ]);
     }
 }
