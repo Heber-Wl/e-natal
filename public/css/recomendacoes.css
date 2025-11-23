@@ -1,0 +1,271 @@
+.container-recomendacoes {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.card-risco {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    border-left: 5px solid;
+    transition: all 0.3s ease;
+}
+
+.card-risco:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-alto-risco {
+    border-left-color: #ff5252;
+    background: linear-gradient(to right, rgba(255, 82, 82, 0.05), white);
+}
+
+.card-risco-moderado {
+    border-left-color: #ffc107;
+    background: linear-gradient(to right, rgba(255, 193, 7, 0.05), white);
+}
+
+.card-complicacoes {
+    border-left-color: #00bcd4;
+    background: linear-gradient(to right, rgba(0, 188, 212, 0.05), white);
+}
+
+.cabecalho-risco {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.icone-risco {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.card-alto-risco .icone-risco {
+    background: rgba(255, 82, 82, 0.15);
+    color: #ff5252;
+}
+
+.card-risco-moderado .icone-risco {
+    background: rgba(255, 193, 7, 0.15);
+    color: #ffc107;
+}
+
+.card-complicacoes .icone-risco {
+    background: rgba(0, 188, 212, 0.15);
+    color: #00bcd4;
+}
+
+.titulo-risco {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.conteudo-risco {
+    padding-left: 48px;
+}
+
+.lista-itens {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lista-itens li {
+    font-size: 14px;
+    color: #555;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.lista-itens li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.card-alto-risco .lista-itens li::before {
+    color: #ff5252;
+}
+
+.card-risco-moderado .lista-itens li::before {
+    color: #ffc107;
+}
+
+.card-complicacoes .lista-itens li::before {
+    color: #00bcd4;
+}
+.card-recomendacoes-principal {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    border-left: 5px solid #00bcd4;
+    background: linear-gradient(to right, rgba(0, 188, 212, 0.05), white);
+}
+
+.cabecalho-recomendacoes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.icone-recomendacoes {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(0, 188, 212, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00bcd4;
+    font-size: 18px;
+}
+
+.titulo-recomendacoes {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.conteudo-recomendacoes {
+    padding-left: 48px;
+}
+
+.lista-recomendacoes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lista-recomendacoes li {
+    font-size: 14px;
+    color: #555;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.lista-recomendacoes li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #00bcd4;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.destaque-alto-risco {
+    color: #ff5252;
+    font-weight: 600;
+}
+
+.area-botoes-recomendacoes {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.botao-acao-rec {
+    padding: 14px 40px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.botao-voltar-rec {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.botao-voltar-rec:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.botao-enviar-rec {
+    background: linear-gradient(135deg, #00bcd4, #0097a7);
+    color: white;
+    box-shadow: 0 4px 16px rgba(0, 188, 212, 0.3);
+}
+
+.botao-enviar-rec:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0, 188, 212, 0.4);
+}
+
+.botao-acao-rec i {
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    .container-recomendacoes {
+        padding: 0 16px 40px;
+    }
+
+    .card-risco,
+    .card-recomendacoes-principal,
+    .card-compartilhar {
+        padding: 20px;
+    }
+
+    .conteudo-risco,
+    .conteudo-recomendacoes {
+        padding-left: 24px;
+    }
+
+    .titulo-risco,
+    .titulo-recomendacoes,
+    .titulo-compartilhar {
+        font-size: 16px;
+    }
+
+    .lista-itens li,
+    .lista-recomendacoes li {
+        font-size: 13px;
+    }
+
+    .botao-enviar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .botao-flutuante {
+        width: 52px;
+        height: 52px;
+        bottom: 80px;
+        left: 20px;
+        font-size: 18px;
+    }
+}

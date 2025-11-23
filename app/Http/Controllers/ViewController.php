@@ -59,4 +59,14 @@ class ViewController extends Controller
     {
         return view('cadastroMedico'); 
     }
+
+       public function detalhes()
+    {
+        return view('detalhesPaciente'); 
+    }
+
+         public function recomendacoes()
+    {
+        return view('recomedacoes'); 
+    }
 }
