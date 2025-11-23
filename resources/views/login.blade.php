@@ -15,6 +15,7 @@
     <title>Login</title>
 </head>
 <body>
+    @include('layouts.alert')
     <section class="container-login">
         <div class="bloco-form">
             <div class="top">
