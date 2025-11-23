@@ -36,7 +36,8 @@
             <h1 class="titulo-pagina">Novo Registro</h1>
         </div>
 
-        <form class="cartao-formulario">
+        <form class="cartao-formulario" method="POST" action="{{ route('cadastrar') }}">
+            @csrf
             <div class="secao-formulario secao-dados">
                 <div class="titulo-secao">
                     <i class="fas fa-user"></i>
@@ -45,27 +46,27 @@
                 <div class="grade-campos">
                     <div class="grupo-campo">
                         <label class="rotulo">Cartão do SUS <span class="obrigatorio">*</span></label>
-                        <input type="text" class="campo-entrada" placeholder="000 0000 0000 0000" required>
+                        <input type="text" class="campo-entrada" name="cartao_sus" placeholder="000 0000 0000 0000" required>
                     </div>
                     <div class="grupo-campo">
                         <label class="rotulo">Nome</label>
-                        <input type="text" class="campo-entrada" placeholder="Nome completo">
+                        <input type="text" class="campo-entrada" name="nome" placeholder="Nome completo" required>
                     </div>
                     <div class="grupo-campo">
                         <label class="rotulo">Peso (KG) <span class="obrigatorio">*</span></label>
-                        <input type="text" class="campo-entrada" placeholder="Ex: 65" required>
+                        <input type="text" class="campo-entrada" name="peso" placeholder="Ex: 65" required>
                     </div>
                     <div class="grupo-campo">
                         <label class="rotulo">Altura (M) <span class="obrigatorio">*</span></label>
-                        <input type="text" class="campo-entrada" placeholder="Ex: 1.65" required>
+                        <input type="text" class="campo-entrada" name="altura" placeholder="Ex: 1.65" required>
                     </div>
                     <div class="grupo-campo">
                         <label class="rotulo">Data de nascimento</label>
-                        <input type="date" class="campo-entrada">
+                        <input type="date" class="campo-entrada" name="data_nascimento" required>
                     </div>
                     <div class="grupo-campo">
                         <label class="rotulo">Data da última menstruação</label>
-                        <input type="date" class="campo-entrada">
+                        <input type="date" class="campo-entrada" name="data_ultima_mestruacao">
                     </div>
                 </div>
             </div>
