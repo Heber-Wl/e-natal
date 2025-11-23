@@ -7,7 +7,7 @@ Route::get('/', [ViewController::class, 'login'])->name('login');
 Route::post('/logar', [ViewController::class, 'logar'])->name('logar');
 Route::get('/sair', [ViewController::class, 'sair'])->name('sair');
 Route::get('/cadastroMedico', [ViewController::class, 'cadastroMedico'])->name('cadastroMedico');
-
+Route::post('/registrarMedico', [ViewController::class, 'registrarMedico'])->name('registrarMedico');
 
 Route::middleware(['medico.auth'])->group(function () {
     Route::get('/cadastro', [ViewController::class, 'cadastro'])->name('cadastro');

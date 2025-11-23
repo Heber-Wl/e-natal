@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RequestRegistroMedico;
 use App\Http\Requests\RequestRegistroPaciente;
 use App\Http\Services\MedicoService;
 use App\Models\Paciente;
@@ -25,7 +26,7 @@ class ViewController extends Controller
         ];
 
         if (Auth::guard('medico')->attempt($credenciais)) {
-            return redirect()->route('cadastro')->with('success', 'Login realizado com sucesso!');
+            return redirect()->route('pacientes')->with('success', 'Login realizado com sucesso!');
         }
         
         return redirect()->route('login')->with('error', 'Credenciais inválidas. Por favor, tente novamente.');
@@ -83,5 +84,17 @@ class ViewController extends Controller
     public function recomendacoes()
     {
         return view('recomedacoes'); 
+    }
+    public function registrarMedico(RequestRegistroMedico $request)
+    {
+        try {
+            if ($request->password_confirmation !== $request->password) {
+                return redirect()->route('cadastroMedico')->with('error', 'A confirmação de senha não corresponde.');
+            }
+            $this->medicoService->registrarMedico($request);
+            return redirect()->route('login')->with('success', 'Médico registrado com sucesso!');
+        } catch (\Exception $e) {
+            return redirect()->route('cadastroMedico')->with('error', 'Erro ao registrar médico: ');
+        }
     }
 }
