@@ -3,25 +3,8 @@
 @section('title', 'Novo Registro')
 
 @section('content')
-
-    <div class="cabecalho-pagina">
-        <div class="info-pagina">
-            <div class="caminho-navegacao">
-                <a href="/">Início</a> / Pacientes
-            </div>
-            <h1 class="titulo-pagina">Novo Registro</h1>
-        </div>
-
-        <div class="perfil-profissional">
-            <img src="{{ asset('images/avatar-profissional.jpg') }}" alt="Foto" class="foto-profissional">
-            <div class="dados-profissional">
-                <span class="nome-profissional">Dr. Silva</span>
-                <span class="registro-profissional">xxx-xxx-xxx (coren ou crm)</span>
-            </div>
-        </div>
-    </div>
-
-    <form class="cartao-formulario">
+    <form class="cartao-formulario" action="{{ route('cadastrar') }}" method="POST">
+        @csrf
         <div class="secao-formulario secao-dados">
             <div class="titulo-secao">
                 <i class="fas fa-user"></i>
@@ -30,23 +13,23 @@
             <div class="grade-campos">
                 <div class="grupo-campo">
                     <label class="rotulo">Cartão do SUS <span class="obrigatorio">*</span></label>
-                    <input id="sus" type="text" class="campo-entrada" placeholder="000 0000 0000 0000" required>
+                    <input id="sus" type="text" class="campo-entrada" name="cartao_sus" placeholder="000 0000 0000 0000" required>
                 </div>
                 <div class="grupo-campo">
                     <label class="rotulo">Nome</label>
-                    <input id="nome" type="text" class="campo-entrada" placeholder="Nome completo">
+                    <input id="nome" type="text" class="campo-entrada" name="nome" placeholder="Nome completo" required>
                 </div>
                 <div class="grupo-campo">
                     <label class="rotulo">Peso (KG) <span class="obrigatorio">*</span></label>
-                    <input id="peso" type="text" class="campo-entrada" placeholder="Ex: 65" required>
+                    <input id="peso" type="text" class="campo-entrada" name="peso" placeholder="Ex: 65" required>
                 </div>
                 <div class="grupo-campo">
                     <label class="rotulo">Altura (M) <span class="obrigatorio">*</span></label>
-                    <input id="altura" type="text" class="campo-entrada" placeholder="Ex: 1.65" required>
+                    <input id="altura" type="text" class="campo-entrada" name="altura" placeholder="Ex: 1.65" required>
                 </div>
                 <div class="grupo-campo">
                     <label class="rotulo">Data de nascimento</label>
-                    <input type="date" class="campo-entrada">
+                    <input type="date" class="campo-entrada" name="data_nascimento" name="data_ultima_mestruacao" required>
                 </div>
                 <div class="grupo-campo">
                     <label class="rotulo">Data da última menstruação</label>

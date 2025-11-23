@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         peso.addEventListener('input', function () {
             let valor = this.value.replace(/\D/g, '');
             if (valor.length > 5) valor = valor.slice(0, 5);
-            if (valor.length > 2) valor = valor.slice(0, valor.length - 2) + ',' + valor.slice(-2);
+            if (valor.length > 2) valor = valor.slice(0, valor.length - 2) + '.' + valor.slice(-2);
             this.value = valor;
         });
     }
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
         altura.addEventListener('input', function () {
             let valor = this.value.replace(/\D/g, '');
             if (valor.length > 3) valor = valor.slice(0, 3);
-            if (valor.length > 2) valor = valor.slice(0, valor.length - 2) + ',' + valor.slice(-2);
+            if (valor.length > 2) valor = valor.slice(0, valor.length - 2) + '.' + valor.slice(-2);
             this.value = valor;
         });
     }

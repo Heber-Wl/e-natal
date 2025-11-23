@@ -10,7 +10,7 @@
     </div>
 
     <div class="info-usuario">
-        <span>Dr. Silva</span>
+        <span>Dr. {{ Auth::guard('medico')->user()->resgatarPrimeirosDoisNomes() }}</span>
         <div class="avatar-usuario">DS</div>
     </div>
 </nav>
