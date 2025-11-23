@@ -3,6 +3,14 @@
 @section('title', 'Novo Registro')
 
 @section('content')
+    <div class="cabecalho-pagina">
+        <div class="info-pagina">
+            <div class="caminho-navegacao">
+                <a href="/">Início</a> / Pacientes
+            </div>
+            <h1 class="titulo-pagina">Novo Registro</h1>
+        </div>
+    </div>
     <form class="cartao-formulario" action="{{ route('cadastrar') }}" method="POST">
         @csrf
         <div class="secao-formulario secao-dados">
