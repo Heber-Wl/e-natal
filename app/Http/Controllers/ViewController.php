@@ -37,4 +37,9 @@ class ViewController extends Controller
     {
         return view('cadastro');
     }
+
+    public function listaPacientes()
+{
+    return view('pacientes'); 
+}
 }
