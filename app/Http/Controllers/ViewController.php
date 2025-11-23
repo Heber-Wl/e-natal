@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\RequestRegistroPaciente;
 use App\Http\Services\MedicoService;
+use App\Models\Paciente;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -52,20 +53,34 @@ class ViewController extends Controller
     }
     public function listaPacientes()
     {
-        return view('pacientes'); 
+        $pacientes = Paciente::where('medico_id', Auth::guard('medico')->user()->id)->get();
+        return view('pacientes', [
+            'pacientes' => $pacientes
+        ]); 
     }
 
-      public function cadastroMedico()
+    public function cadastroMedico()
     {
         return view('cadastroMedico'); 
     }
 
-       public function detalhes()
+    public function detalhes($id)
     {
-        return view('detalhesPaciente'); 
+        $paciente = Paciente::find($id);
+
+        if ($paciente->medico_id !== Auth::guard('medico')->user()->id) {
+            return redirect()->route('pacientes')->with('error', 'Acesso negado ao paciente solicitado.');
+        }
+        $idade = \Carbon\Carbon::parse($paciente->data_nascimento)->age;
+        $imc = $paciente->peso / ($paciente->altura * $paciente->altura);
+        return view('detalhesPaciente', [
+            'paciente' => $paciente,
+            'idade' => $idade,
+            'imc' => $imc
+        ]); 
     }
 
-         public function recomendacoes()
+    public function recomendacoes()
     {
         return view('recomedacoes'); 
     }

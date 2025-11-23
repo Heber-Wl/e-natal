@@ -13,6 +13,6 @@ Route::middleware(['medico.auth'])->group(function () {
     Route::get('/cadastro', [ViewController::class, 'cadastro'])->name('cadastro');
     Route::post('/cadastrar', [ViewController::class, 'cadastrar'])->name('cadastrar');
     Route::get('/pacientes', [ViewController::class, 'listaPacientes'])->name('pacientes');
-    Route::get('/detalhes', [ViewController::class, 'detalhes'])->name('detalhes');
+    Route::get('/detalhes/{id}', [ViewController::class, 'detalhes'])->name('detalhes');
     Route::get('/recomendacoes', [ViewController::class, 'recomendacoes'])->name('recomendacoes');
 });
