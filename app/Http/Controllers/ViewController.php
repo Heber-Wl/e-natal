@@ -42,10 +42,6 @@ class ViewController extends Controller
     {
         return view('cadastro');
     }
-    public function listaPacientes()
-    {
-        return view('pacientes'); 
-    }
     public function cadastrar(RequestRegistroPaciente $request) {
         try {
             $this->medicoService->cadastrarPaciente($request);
@@ -53,5 +49,9 @@ class ViewController extends Controller
         } catch (\Exception $e) {
             return redirect()->route('cadastro')->with('error', 'Erro ao cadastrar paciente: ');
         }
+    }
+    public function listaPacientes()
+    {
+        return view('pacientes'); 
     }
 }
