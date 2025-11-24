@@ -1,59 +1,59 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 👶 E-NATAL: Sistema Inteligente de Apoio ao Pré-Natal
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## ✨ Visão Geral do Projeto
 
-## About Laravel
+O **E-NATAL** é uma solução digital robusta e intuitiva, projetada para otimizar e qualificar o acompanhamento pré-natal. Ele permite que profissionais de saúde realizem o **cadastro detalhado de gestantes**, conduzam um **diagnóstico de risco gestacional** automatizado e tenham acesso a **calculadoras obstétricas** essenciais em uma única plataforma móvel.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+O sistema processa informações clínicas, históricas e de exames para classificar o risco da gestação (Alto, Moderado ou Baixo), oferecendo **recomendações personalizadas** e identificando possíveis complicações, auxiliando na tomada de decisão clínica e garantindo um cuidado mais direcionado.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🌟 Demonstração Visual
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🚀 Funcionalidades Detalhadas
 
-## Learning Laravel
+O E-NATAL abrange três pilares fundamentais no acompanhamento da gestante:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### 1. Cadastro e Histórico Clínico
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+O sistema permite a entrada de uma vasta gama de dados cruciais para a avaliação de risco:
 
-## Laravel Sponsors
+* **Identificação:** Nome, Cartão SUS e CPF.
+* **Dados Físicos:** Peso (KG) e Altura (M).
+* **Datas Obstétricas:** Data da Última Menstruação, Data de Nascimento, Data da Última Gestação.
+* **Histórico de Gestação:**
+    * Primeira Gestação? Gestação Múltipla? Foi por reprodução assistida? Já teve alguma perda gestacional?
+* **Fatores de Risco Mental:**
+    * Ambiente estressante, Gestação planejada, Aceitação da gravidez, Histórico psiquiátrico.
+* **Histórico de Saúde Geral (Saúde):**
+    * Histórico e/ou familiar de pré-eclâmpsia, complicações, doenças renais e autoimunes, hipertensão, cardiopatia, risco de diabetes, uso de álcool ou drogas, morte perinatal ou parto prematuro anterior, pneumopatia e infecções pré-existentes.
+    * Registro de Glicemia (MG/DL).
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 2. Exames e Vacinas
 
-### Premium Partners
+* **Exames Registrados:** Tipagem Sanguínea, Sorologias, Urina Tipo 1, Urocultura.
+* **Vacinas Registradas:** Hepatite B, Covid-19, Influenza, DTPA.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 3. Diagnóstico Automático e Recomendações
 
-## Contributing
+Com base nas informações registradas, o aplicativo gera um resumo diagnóstico instantâneo:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* **Classificação de Risco:** Alto Risco, Risco Moderado, ou (presumivelmente) Risco Habitual/Baixo.
+* **Lista de Fatores de Risco:** Apresenta claramente todos os pontos que contribuíram para a classificação.
+* **Complicações Potenciais:** Lista as possíveis complicações (ex: Desenvolvimento de pré-eclâmpsia, Restrição de Crescimento Fetal).
+* **Recomendações:** Fornece um plano de conduta direcionado, incluindo: acompanhamento especializado, monitoramento de pressão arterial, exames específicos, e orientações de estilo de vida.
+* **Compartilhamento:** Opção de **Enviar Relatório** diagnóstico completo por e-mail.
 
-## Code of Conduct
+### 4. Calculadoras Clínicas
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Um menu dedicado (Calculadoras) fornece ferramentas úteis para o monitoramento:
 
-## Security Vulnerabilities
+| Calculadora | Fórmula / Descrição |
+| :--- | :--- |
+| **Idade Gestacional (IG)** | Cálculo da IG a partir da Data da Última Menstruação (DUM). |
+| **Data Provável do Parto (DPP)** | Regra de Naegele: $\text{DPP} = \text{DUM} + 7 \text{ dias} + 9 \text{ meses}$. |
+| **IMC Pré-Gestacional** | Índice de Massa Corporal ($\text{Massa (kg)} / \text{Altura}^2 (\text{m})$). |
+| **Ganho de Peso Recomendado** | Baseado no IMC pré-gestacional (Protocolo ACOG 2013). |
+| **Pressão Arterial Média (PAM)** | $\text{PAM} = (\text{PAS} + 2 \times \text{PAD}) / 3$. Alerta para $\text{PAM} \ge 105 \text{ mmHg}$ (risco de pré-eclâmpsia). |
+| **Risco de Pré-eclâmpsia** | Avaliação baseada na marcação de fatores de risco. |
+| **Altura Uterina x IG** | Comparação: Altura uterina ($\text{cm}$) $\approx \text{IG (semanas)} \pm 2 \text{cm}$. |
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
