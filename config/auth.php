@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'medico' => [
+            'driver' => 'session',
+            'provider' => 'medicos',
+        ],
     ],
 
     /*
@@ -62,7 +66,11 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', App\Models\User::class),
+            'model' => env('AUTH_MODEL', App\Models\Medico::class),
+        ],
+        'medicos' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Medico::class,
         ],
 
         // 'users' => [
