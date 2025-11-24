@@ -50,7 +50,7 @@ Um menu dedicado (Calculadoras) fornece ferramentas úteis para o monitoramento:
 | :--- | :--- |
 | **Idade Gestacional (IG)** | Cálculo da IG a partir da Data da Última Menstruação (DUM). |
 | **Data Provável do Parto (DPP)** | Regra de Naegele: $\text{DPP} = \text{DUM} + 7 \text{ dias} + 9 \text{ meses}$. |
-| **IMC Pré-Gestacional** | Índice de Massa Corporal ($\text{Massa (kg)} / \text{Altura}^2 (\text{m})$). |
+| **IMC Pré-Gestacional** | Índice de Massa Corporal: peso / (altura x altura). |
 | **Ganho de Peso Recomendado** | Baseado no IMC pré-gestacional (Protocolo ACOG 2013). |
 | **Pressão Arterial Média (PAM)** | $\text{PAM} = (\text{PAS} + 2 \times \text{PAD}) / 3$. Alerta para $\text{PAM} \ge 105 \text{ mmHg}$ (risco de pré-eclâmpsia). |
 | **Risco de Pré-eclâmpsia** | Avaliação baseada na marcação de fatores de risco. |
