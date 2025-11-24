@@ -56,4 +56,31 @@ Um menu dedicado (Calculadoras) fornece ferramentas úteis para o monitoramento:
 | **Risco de Pré-eclâmpsia** | Avaliação baseada na marcação de fatores de risco. |
 | **Altura Uterina x IG** | Comparação: Altura uterina ($\text{cm}$) $\approx \text{IG (semanas)} \pm 2 \text{cm}$. |
 
+## 🌟 Autores:
+- HÉBER WILTON DUARTE DE ARAUJO
+- MARCELO EUGENIO DE ALMEIDA BARBOSA
+- RHAYANE FREITAS LINS DE OLIVEIRA
+- ZEUS RAMALHO COSTA FARIAS
+
+## 💻 Tecnologias Utilizadas
+* **HTM, CSS, JAVASCRIPT, LARAVEL** .
+
+## TELAS SITE:
+![TELAPRINCIPAL](https://github.com/user-attachments/assets/d4d41463-252d-49fb-9001-947
+![TELAINICIO](https://github.com/user-attachments/assets/bb0f0901-0419-4bce-bf7a-70450c778763)
+1fe275cdd)
+![TELACADASTRO](https://github.com/user-attachments/assets/e00dd791-497f-4742-81ae-ee53c3080c8c)
+![TELARECOMENDACOES](https://github.com/user-attachments/assets/1b47be5f-ff4f-4b79-b4cd-85469d9c9212)
+
+## FIGMA:
+<img width="200" height="360" alt="Captura de Tela 2025-11-23 às 21 27 17" src="https://github.com/user-attachments/assets/5b
+<img width="489" height="481" alt="Captura de Tela 2025-11-23 às 21 27 45" src="https://github.com/user-attachments/assets/42b57c2a-9035-4781-b197-1c7e4ed20933" />
+a2dc42-9bd3-4616-867a-6a618dfbaf08" />
+<img width="489" height="481" alt="Captura de Tela 2025-11-23 às 21 27 45" src="https://github.com/user-attachments/assets/2064efa9-1b82-484b-be61-51f9fe71c013" />
+<img width="253" height="477" alt="Captura de Tela 2025-11-23 às 21 28 38" src="https://github.com/user-attachments/assets/9c4f2e38-2f45-49a8-bb45-c2ae802092d6" />
+<img width="203" height="360" alt="Captura de Tela 2025-11-23 às 21 29 18" src="https://github.com/user-attachments/assets/a92cea50-6139-4840-be78-16fbc43cc64f" />
+
+
+
+
 
