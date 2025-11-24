@@ -72,7 +72,7 @@ Um menu dedicado (Calculadoras) fornece ferramentas úteis para o monitoramento:
 ![TELARECOMENDACOES](https://github.com/user-attachments/assets/1b47be5f-ff4f-4b79-b4cd-85469d9c9212)
 
 ## FIGMA:
-<img width="200" height="360" alt="Captura de Tela 2025-11-23 às 21 27 17" src="https://github.com/user-attachments/assets/5ba2dc42-9bd3-4616-867a-6a618dfbaf08" />
+<img width="248" height="492" alt="Captura de Tela 2025-11-23 às 21 44 01" src="https://github.com/user-attachments/assets/ccce344c-6b53-4226-843f-f27eb1814b84" />
 <img width="489" height="481" alt="Captura de Tela 2025-11-23 às 21 27 45" src="https://github.com/user-attachments/assets/42b57c2a-9035-4781-b197-1c7e4ed20933" />
 <img width="253" height="477" alt="Captura de Tela 2025-11-23 às 21 28 38" src="https://github.com/user-attachments/assets/9c4f2e38-2f45-49a8-bb45-c2ae802092d6" />
 <img width="203" height="360" alt="Captura de Tela 2025-11-23 às 21 29 18" src="https://github.com/user-attachments/assets/a92cea50-6139-4840-be78-16fbc43cc64f" />
