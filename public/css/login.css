@@ -61,6 +61,7 @@
     color: #2EAEAF;
     display: flex;
     justify-content: right;
+    text-decoration: none;
 }
 .botao-entrar {
     display: flex;

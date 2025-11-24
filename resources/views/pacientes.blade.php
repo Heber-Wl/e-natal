@@ -28,7 +28,7 @@
                     <span class="nome-paciente">{{ $paciente->nome }}</span>
                     <span class="sus-paciente">{{ $paciente->cartao_sus }}(número sus)</span>
                 </div>
-                <span class="data-paciente">{{ $paciente->created_at }} às xx:xxh</span>
+                <span class="data-paciente">{{ \Carbon\Carbon::parse($paciente->created_at)->format('d/m/Y') }} às {{ \Carbon\Carbon::parse($paciente->created_at)->format('H:s') }}h</span>
                 <i class="fas fa-chevron-right seta-paciente"></i>
             </a>
         @endforeach
